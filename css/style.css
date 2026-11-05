@@ -1,0 +1,303 @@
+@charset "UTF-8";
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    font-weight: normal;
+}
+img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: bottom;
+    background: transparent;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    text-decoration: none;
+}
+
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.clearfix:before {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.clearfix {
+    display: block;
+}
+
+body {
+  line-height: 1.5;
+}
+
+.wrapper {
+  max-width: 560px;
+  margin: auto;
+  padding: 80px;
+}
+.heading-title {
+  margin-bottom: 40px;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+.result {
+  margin-bottom: 40px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ===== 評価 ===== */
+.score {
+    margin-bottom: 32px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* ===== 両者の手 ===== */
+.hands {
+    display: flex;                          /* 「あなた」と「部長」を横並び */
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 32px;
+    font-size: 20px;
+}
+
+/* ===== セリフ ===== */
+.message {
+    white-space: pre-line;                  /* \n を改行として表示する */
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* ===== 手のボタン ===== */
+.button-area {
+    display: flex;                          /* 3つのボタンを横並び */
+    justify-content: center;
+    gap: 16px;
+}
+
+.hand-button {
+    padding: 16px 32px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #1f3a5f;             /* 紺色（会社っぽく） */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.hand-button:hover {
+    opacity: 0.8;                             /* マウスが乗ったら少し薄く */
+}
+
+.hand-button:active {
+    transform: scale(0.95);                   /* 押した瞬間に少し縮む */
+    transition-duration: 0.05s;
+}
+
+.hand-button:disabled {
+    background-color: #CCCCCC;              /* 押せないときはグレー */
+    cursor: not-allowed;                      /* マウスが「禁止」マークに */
+    opacity: 1;
+}
+
+/* ===== もう一度ボタン ===== */
+.retry-button {
+    display: none;                            /* 普段は隠しておく */
+    margin: 40px auto 0;
+    padding: 12px 32px;
+    font-size: 16px;
+    color: #1f3a5f;
+    background-color: #ffffff;
+    border: 2px solid #1f3a5f;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ===== ピンチ（30点以下） ===== */
+body {
+    transition: background-color 0.5s;
+}
+
+body.pinch {
+    background-color:  #fff5f5;             /* 背景がうっすら赤く */
+}
+
+body.pinch .score {
+    color: #c62828;                         /* 点数の文字が赤く */
+}
+
+body.pinch .hand-button {
+    background-color: #c62828;              /* ボタンが赤く */
+}
+
+/* ===== 大ピンチ（20点以下=次に買ったらクビ） ===== */
+body.danger {
+    background-color: #ffe5e5;              /* 背景がもう少し赤く */
+}
+
+body.danger .score {
+    animation: tremble 0.3s infinite;         /* 点数がブルブル震える */
+}
+
+body.danger .hand-button {
+    animation: pulse 1s infinite;             /* ボタンが赤く脈打つ */
+}
+
+@keyframes tremble {
+    0%, 100% { transform: translateX(0); }
+    25%      { transform: translateX(-2px); }
+    75%      { transform: translateX(2px); }
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(198, 40, 40, 0.6); }
+    50%      { box-shadow: 0 0 0 8px rgba(198, 40, 40, 0); }
+}
+
+/* ピンチ中でも、押せないときはグレーに戻す */
+body.pinch .hand-button:disabled {
+    background-color: #cccccc; 
+    animation: none;
+}

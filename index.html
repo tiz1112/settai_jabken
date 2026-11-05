@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>接待じゃんけん</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1 class="heading-title">接待じゃんけん</h1>
+
+    <!-- 評価 -->
+    <p class="score text-center">部長からの評価：50点</p>
+
+
+    <!-- 両者の手 -->
+    <div class="hands text-center">
+      <p class="player-hand">あなた：？</p>
+      <p class="boss-hand">部長：？</p>
+    </div>
+
+    <!-- 結果とセリフ -->
+    <div class="result text-center">
+      <p class="message">部長「さぁ、勝負だ。手加減はいらんぞ」</p>
+    </div>
+
+    <!-- 手のボタン -->
+    <div class="button-area text-center">
+      <button class="hand-button" data-hand="0">グー</button>
+      <button class="hand-button" data-hand="1">チョキ</button>
+      <button class="hand-button" data-hand="2">パー</button>
+    </div>
+
+    <div class="text-center">
+      <button class="retry-button">もう一度やる！</button>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
